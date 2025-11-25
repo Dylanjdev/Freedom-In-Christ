@@ -200,22 +200,6 @@
       </div>
     </section>
 
-    <!-- SERMONS -->
-    <section id="sermons" class="section">
-      <div class="container">
-        <h2>Sermons</h2>
-        <div class="sermon-dropdown">
-          <button class="sermon-toggle">Latest Sermon ▼</button>
-          <div class="sermon-video-container">
-            <video controls width="100%">
-              <source src="Sermons/AQOLWlKF_oyHV0_jxAF33929mYa30XrBYEY9UV7mR6O6z_aE4sXi1kNZHIPKFt9yjQDwgX5Vej-ZCFWto3FDUs4oYpaorDpI_h5KMkcwSGUiTnJr2A.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- GIVE -->
     <section id="give" class="section section-alt">
       <div class="container two-column">
@@ -362,27 +346,6 @@
       hamburger.classList.remove("active");
       mobileNav.classList.remove("active");
     });
-  });
-
-  // Sermon dropdown toggle
-  const sermonToggle = document.querySelector(".sermon-toggle");
-  const sermonVideo = document.querySelector(".sermon-video-container");
-  const video = sermonVideo.querySelector("video");
-
-  sermonToggle.addEventListener("click", () => {
-    sermonVideo.classList.toggle("active");
-    
-    // Pause video when closing
-    if (!sermonVideo.classList.contains("active")) {
-      video.pause();
-    }
-    
-    // Update arrow direction
-    if (sermonVideo.classList.contains("active")) {
-      sermonToggle.innerHTML = "Latest Sermon ▲";
-    } else {
-      sermonToggle.innerHTML = "Latest Sermon ▼";
-    }
   });
 </script>
 
