@@ -1,0 +1,541 @@
+/* -----------------------------------
+   Base & Reset
+----------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* -----------------------------------
+   Header
+----------------------------------- */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.logo-mark {
+  font-size: 1.4rem;
+  color: #b22222;
+}
+
+.nav a {
+  margin-left: 15px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #444;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #b22222;
+}
+
+/* -----------------------------------
+   Hero Section
+----------------------------------- */
+.hero {
+  background: url("/img/Church.JPG") center/cover no-repeat;
+  padding: 120px 0;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: #b22222;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #8c1a1a;
+}
+
+.btn.ghost {
+  border: 2px solid white;
+  color: white;
+}
+
+.btn.ghost:hover {
+  background: white;
+ color: black;
+}
+
+.hero-times p {
+  margin-bottom: 4px;
+}
+
+.hero-card {
+  background: white;
+  color: #333;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 350px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* -----------------------------------
+   Sections
+----------------------------------- */
+.section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.section-alt {
+  background: #f0f0f0;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #b22222;
+}
+
+.section-intro {
+  margin-bottom: 30px;
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+/* Two Column Layout */
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.two-column > div {
+  flex: 1 1 450px;
+}
+
+/* Info Card */
+.info-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+
+/* -----------------------------------
+   Grid / Cards
+----------------------------------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.empty-card {
+  text-align: center;
+  opacity: 0.75;
+  padding: 40px;
+}
+
+/* -----------------------------------
+   Service Times
+----------------------------------- */
+.service-times {
+  display: grid;
+  gap: 20px;
+}
+
+.service-time h3 {
+  color: #b22222;
+  margin-bottom: 8px;
+}
+
+/* -----------------------------------
+   Photos Section
+----------------------------------- */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.photo-card {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: transform .4s;
+}
+
+.photo-card:hover img {
+  transform: scale(1.06);
+}
+
+/* -----------------------------------
+   Contact Form
+----------------------------------- */
+.contact-form {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  flex: 1 1 400px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-form button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-note {
+  font-size: 0.85rem;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+.form-message {
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: center;
+  display: none;
+}
+
+.form-message.success {
+  display: block;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+  display: block;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* -----------------------------------
+   Location & Map
+----------------------------------- */
+.location-info {
+  margin-top: 30px;
+}
+
+.location-info h3 {
+  margin-bottom: 10px;
+  color: #8B0000;
+}
+
+.map-container {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+}
+
+/* -----------------------------------
+   Sermon Video
+----------------------------------- */
+.sermon-dropdown {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sermon-toggle {
+  width: 100%;
+  padding: 15px 20px;
+  background: #8B0000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sermon-toggle:hover {
+  background: #a00000;
+}
+
+.sermon-video-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: white;
+  border-radius: 0 0 10px 10px;
+  margin-top: 2px;
+}
+
+.sermon-video-container.active {
+  max-height: 800px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.sermon-video-container video {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* -----------------------------------
+   Footer
+----------------------------------- */
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 60px;
+}
+
+.footer-small {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+/* ------------------------------
+   Mobile Navigation
+------------------------------ */
+
+/* Hide Mobile Nav on Desktop */
+.mobile-nav {
+  display: none;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 720px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Mobile Dropdown */
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    transform: translateY(-300px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.35s ease;
+    z-index: 9999;
+  }
+
+  .mobile-nav a {
+    padding: 12px 20px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .mobile-nav a:hover {
+    background: #f7f7f7;
+    color: #b22222;
+  }
+
+  /* Mobile Nav Active */
+  .mobile-nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Hamburger Animation */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+.social-links {
+  margin: 12px 0;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #1877f2; /* official Facebook blue */
+  transform: scale(1.15);
+}
+
+
+
+/* -----------------------------------
+   Responsive
+----------------------------------- */
+@media (max-width: 720px) {
+
+  .nav {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+  }
+}
